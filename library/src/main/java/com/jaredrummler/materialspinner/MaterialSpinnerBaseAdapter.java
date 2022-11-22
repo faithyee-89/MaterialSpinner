@@ -55,7 +55,7 @@ public abstract class MaterialSpinnerBaseAdapter<T> extends BaseAdapter {
         final TextView textView;
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(R.layout.ms__list_item, parent, false);
+            convertView = inflater.inflate(R.layout.item_custom_spinner_ms_list_item, parent, false);
             textView = (TextView) convertView.findViewById(R.id.tv_tinted_spinner);
             textView.setTextColor(textColor);
             textView.setBackgroundColor(itemBackgroundColor);

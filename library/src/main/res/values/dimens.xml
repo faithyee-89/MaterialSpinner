@@ -17,9 +17,9 @@
   -->
 
 <resources>
-  <dimen name="ms__padding_left">24dp</dimen>
-  <dimen name="ms__padding_top">12dp</dimen>
-  <dimen name="ms__item_height">48dp</dimen>
-  <dimen name="ms__popup_padding_left">24dp</dimen>
-  <dimen name="ms__popup_padding_top">12dp</dimen>
+  <dimen name="custom_ms_padding_left">24dp</dimen>
+  <dimen name="custom_ms_padding_top">12dp</dimen>
+  <dimen name="custom_ms_item_height">48dp</dimen>
+  <dimen name="custom_ms_popup_padding_left">24dp</dimen>
+  <dimen name="custom_ms_popup_padding_top">12dp</dimen>
 </resources>

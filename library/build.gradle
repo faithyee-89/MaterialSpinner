@@ -2,11 +2,10 @@ apply plugin: 'com.android.library'
 
 android {
   compileSdk 32
-  resourcePrefix 'ms__'
 
   defaultConfig {
     minSdk 14
-    targetSdk 28
+    targetSdk 32
   }
 }
 

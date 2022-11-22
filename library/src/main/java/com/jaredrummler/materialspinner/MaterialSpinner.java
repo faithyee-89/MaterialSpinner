@@ -108,15 +108,15 @@ public class MaterialSpinner extends TextView {
 
         Resources resources = getResources();
         defaultPaddingLeft = defaultPaddingRight =
-                defaultPaddingBottom = defaultPaddingTop = resources.getDimensionPixelSize(R.dimen.ms__padding_top);
+                defaultPaddingBottom = defaultPaddingTop = resources.getDimensionPixelSize(R.dimen.custom_ms_padding_top);
         if (rtl) {
-            defaultPaddingRight = resources.getDimensionPixelSize(R.dimen.ms__padding_left);
+            defaultPaddingRight = resources.getDimensionPixelSize(R.dimen.custom_ms_padding_left);
         } else {
-            defaultPaddingLeft = resources.getDimensionPixelSize(R.dimen.ms__padding_left);
+            defaultPaddingLeft = resources.getDimensionPixelSize(R.dimen.custom_ms_padding_left);
         }
         defaultPopupPaddingLeft =
-                defaultPopupPaddingRight = resources.getDimensionPixelSize(R.dimen.ms__popup_padding_left);
-        defaultPopupPaddingTop = defaultPopupPaddingBottom = resources.getDimensionPixelSize(R.dimen.ms__popup_padding_top);
+                defaultPopupPaddingRight = resources.getDimensionPixelSize(R.dimen.custom_ms_popup_padding_left);
+        defaultPopupPaddingTop = defaultPopupPaddingBottom = resources.getDimensionPixelSize(R.dimen.custom_ms_popup_padding_top);
 
         try {
             backgroundColor = ta.getColor(R.styleable.MaterialSpinner_ms_background_color, Color.WHITE);
@@ -155,14 +155,14 @@ public class MaterialSpinner extends TextView {
         setClickable(true);
         setPadding(paddingLeft, paddingTop, paddingRight, paddingBottom);
 
-        setBackgroundResource(R.drawable.ms__selector);
+        setBackgroundResource(R.drawable.custom_spinner_ms_selector);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 && rtl) {
             setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             setTextDirection(View.TEXT_DIRECTION_RTL);
         }
 
         if (!hideArrow) {
-            arrowDrawable = Utils.getDrawable(context, R.drawable.ms__arrow).mutate();
+            arrowDrawable = Utils.getDrawable(context, R.drawable.custom_spinner_ms_arrow).mutate();
             arrowDrawable.setColorFilter(arrowColor, PorterDuff.Mode.SRC_IN);
             Drawable[] drawables = getCompoundDrawables();
             if (rtl) {
@@ -208,9 +208,9 @@ public class MaterialSpinner extends TextView {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             popupWindow.setElevation(16);
-            popupWindow.setBackgroundDrawable(Utils.getDrawable(context, R.drawable.ms__drawable));
+            popupWindow.setBackgroundDrawable(Utils.getDrawable(context, R.drawable.custom_spinner_ms_drawable));
         } else {
-            popupWindow.setBackgroundDrawable(Utils.getDrawable(context, R.drawable.ms__drop_down_shadow));
+            popupWindow.setBackgroundDrawable(Utils.getDrawable(context, R.drawable.ic_custom_ms_drop_down_shadow));
         }
 
         if (backgroundColor != Color.WHITE) { // default color is white
@@ -588,7 +588,7 @@ public class MaterialSpinner extends TextView {
         if (adapter == null) {
             return WindowManager.LayoutParams.WRAP_CONTENT;
         }
-        float itemHeight = getResources().getDimension(R.dimen.ms__item_height);
+        float itemHeight = getResources().getDimension(R.dimen.custom_ms_item_height);
         float listViewHeight = adapter.getCount() * itemHeight;
         if (popupWindowMaxHeight > 0 && listViewHeight > popupWindowMaxHeight) {
             return popupWindowMaxHeight;
