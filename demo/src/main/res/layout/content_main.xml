@@ -22,6 +22,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1D2242"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -33,8 +34,17 @@
   <com.jaredrummler.materialspinner.MaterialSpinner
       android:id="@+id/spinner"
       app:ms_dropdown_max_height="350dp"
+      android:gravity="center"
+      app:ms_hint="spinner描述"
+      android:textSize="14sp"
+      app:ms_item_text_size="16"
+      app:ms_hint_color="#9699AC"
+      app:ms_arrow_tint="#9699AC"
+      app:ms_text_color="#9699AC"
+      app:ms_background_selector="@drawable/shape_radius_border_bg"
+      app:ms_item_background_color="#161635"
       app:ms_dropdown_height="wrap_content"
-      android:layout_width="match_parent"
+      android:layout_width="200dp"
       android:layout_height="wrap_content"/>
 
 </RelativeLayout>
